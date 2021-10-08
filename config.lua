@@ -17,7 +17,7 @@ Config.Debug = true
 Config.EnableOutline = true
 
 -- Enable default options (Toggling vehicle doors)
-Config.EnableDefaultOptions = true
+Config.EnableDefaultOptions = false
 
 -------------------------------------------------------------------------------
 -- Target Configs
@@ -46,11 +46,11 @@ Config.BoxZones = {
               type = "client",
               event = "Toggle:Duty",
               icon = "fas fa-sign-in-alt",
-              label = "Sign In",
+              label = "Clock in/out",
               job = "police",
             },
         },
-        distance = 5
+        distance = 3.0
     },
 
 }
