@@ -11,13 +11,13 @@ Config.VehicleBones = {'chassis', 'chassis_lowlod', 'chassis_dummy', 'seat_dside
 Config.MaxDistance = 3.0
 
 -- Enable debug options and distance preview
-Config.Debug = false
+Config.Debug = true
 
 -- Enable outlines around the entity you're looking at
-Config.EnableOutline = false
+Config.EnableOutline = true
 
 -- Enable default options (Toggling vehicle doors)
-Config.EnableDefaultOptions = false
+Config.EnableDefaultOptions = true
 
 -------------------------------------------------------------------------------
 -- Target Configs
@@ -30,6 +30,28 @@ Config.CircleZones = {
 }
 
 Config.BoxZones = {
+
+	-- Listener event added in policejob client/main.lua
+	["mrpdClockin"] = {
+        name = "MissionRowDutyClipboard",
+        coords = vector3(442.4, -986.02, 31.15),
+        length = 0.45,
+        width = 0.35,
+        heading = 157.0,
+        debugPoly = true,
+        minZ = 29.77834,
+        maxZ = 31.87834,
+        options = {
+            {
+              type = "client",
+              event = "Toggle:Duty",
+              icon = "fas fa-sign-in-alt",
+              label = "Sign In",
+              job = "police",
+            },
+        },
+        distance = 5
+    },
 
 }
 
